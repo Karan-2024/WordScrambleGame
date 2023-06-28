@@ -1,0 +1,124 @@
+/* i dont want to keep the default margin and padding set by system thats why I have written this line 
+    & box-sizing: border-box for keeping the size of the container (div) according to the height and width specified in div*/
+
+*{
+    margin:0; 
+    padding: 0;
+   box-sizing: border-box; 
+}
+
+/*header section for separating a part of code of upper section (h1) heading  . I have taken width 100% , line height , 
+  & background color */
+header{
+    width: 100%;
+    line-height:15vh;
+    background-color:#20bf6b ;
+}
+
+/* In h1 part , I used word spacing, text-align-center, text transform to uppercase , letter spacing , text shadow & font family*/
+h1{
+  
+     word-spacing: 18px;
+    text-align:center;
+    color:white;
+    font-size: 2.2rem;  
+    text-transform:uppercase;
+    letter-spacing: 12px;
+    text-shadow: 0 1px 0 #efefef,
+                 0 2px 0  #efefef,
+                
+                 0 15px 5px rgba(0, 0, 0, 0.1);
+
+                 font-family: 'Carter One', cursive;
+
+
+                 
+}
+
+/* in section part , i used flex property of css, height 85vh, display flex, justify content will align item at upper part of the box at center, but align items 
+   will help the align the item at the exact middle of the conatiner.*/
+section
+{
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7bed9f;
+}
+
+/* the gamearea div class , I used flex direction column for vertically alignment of iput box then thereafter guess button comes
+  box shadow for shadowing the box*/
+.gameArea{
+
+    font-family: 'Source Sans Pro', sans-serif;
+
+    width:50%;
+    height: 400px;
+    padding:20px 0;
+    background-color: #2ed573;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 8px 6px -6px black ;
+
+}
+
+/* rem is used wrt to root of the document , like base is around 16px , so 2 rem is 16*2=32 px. but em is used wrt to parent element ,like div inside div is present
+  & parent div has set 40 px base then suppose child div has 3rem so font size is 3* 40 =120 px .*/
+h3{
+   
+    text-align: center;
+    font-size:1.5rem;
+
+}
+
+/* for input box border radius for making the corner of the input box like circle type */
+input{
+    width: 40%;
+    padding:15px 0;
+    text-align: center;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background-color:  white;
+    color: black;
+    margin: 2rem 0;
+    font-size: 1.1rem;
+}
+
+
+/* margin top for differentiating from input box, cursor pointer for keeping the mouse pointer on the button*/
+button{
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    border: #2f3542;
+    margin-top: 10x;
+    color: #eb4d4b;
+}
+/* font weight for bolding text little bit , used transition property for kepping the time duration of 0.5 sec once we hover over button and it takes 
+    0.5 sec to words and letter separation . */
+button.btn{
+    font-weight: 600;
+    padding: 1rem 2rem;
+    background:white;
+    text-transform: uppercase;
+    transition-property: all;
+    transition-duration:0.5s ;
+    transition-timing-function: cubic-bezier(0.65, -0.25 , 0.25 , 1.95);
+    
+    
+    
+}
+/*in button text , letters and words gets separated once i hover or focus my cursor on the button */
+button.btn:hover , button.btn:focus, button.btn:active{
+    letter-spacing: 0.125rem;
+    word-spacing: 0.2rem;
+}
+
+/* we dont want to display input box in the start view of the website,  so we are hidding the  input box*/
+.hidden{
+    display: none;     
+
+}
